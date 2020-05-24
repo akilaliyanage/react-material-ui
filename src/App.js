@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/nav'
 import Counters from './components/counters';
 import ButtonAppBar from './components/navigation'
+import RecipeReviewCard from './components/card'
 
 class App extends Component {
   state = {
@@ -43,6 +44,7 @@ class App extends Component {
         <Navbar totalCounters={this.state.counters.filter(c=>c.value).length}/>
         <main className="container">
           <Counters counters={this.state.counters} onReset={this.reset} onIncrement={this.onIncrement} onDelete={this.handleDelete} />
+          <RecipeReviewCard/>
         </main>
       </React.Fragment>
     )
